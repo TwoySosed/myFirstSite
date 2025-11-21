@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Квартирный Вопрос - Агентство недвижимости</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logoWithoutText.png" class="favicon">
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="logoWithoutText.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#whyWe">Почему мы?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#uslugi">Услуги</a>
+                </li>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Связаться с нами
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">+7 (495) 123-45-67 </a></li>
+                        <li><a class="dropdown-item" href="#">info@kv-vopros.ru</a></li>
+                        <li><a class="dropdown-item" href="#">г.Санкт-Петербург, ул. набережная реки Фонтанки 66,
+                            <br>этаж 3 (станция метро «Достоевская»)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="home"></section>
+<img src="logoKV.png" class="rounded float-start" alt="logo" width="250">
+<div style="padding-top: 20px"  class="container">
+    <h1>Помогаем решить</h1>
+    <h1>Ваш квартирный вопрос</h1>
+    <h1>уже более <mark>15 лет</mark>.</h1>
+</div>
+<div style="padding-top: 20px"  class="container">
+
+    <p class="lead">
+        «Квартирный вопрос» — больше, чем просто агентство недвижимости. Это команда профессионалов, для которых не бывает нерешаемых задач. Мы знаем, что покупка, продажа или обмен квартиры — это всегда волнительно и сложно. Поэтому, наша главная цель — взять на себя все хлопоты и риски, превратив для Вас сложную сделку в спокойный и предсказуемый результат.
+        Мы работаем на рынке недвижимости с 2010 года и за это время помогли тысячам людей обрести дом мечты, выгодно продать свою недвижимость и надежно инвестировать средства. Наш опыт — Ваш ключ к успешной и безопасной сделке.
+    </p>
+    <button type="button" class="btn btn-outline-success btn-lg" data-bs-toggle="modal" data-bs-target="#formModal">Оставить заявку</button>
+</div>
+
+<div class="modal fade" id="formModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Как к вам обращаться?" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Ваш номер телефона для связи?" required>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" required>
+                        <option value="">Вы покупатель или продавец?</option>
+                        <option value="buyer">Покупатель</option>
+                        <option value="seller">Продавец</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary w-100" onclick="submitForm()">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="alert" class="alert alert-success position-fixed top-0 end-0 m-3" style="display:none;">
+    Заявка отправлена!
+</div>
+
+<script>
+    function submitForm() {
+      const modal = bootstrap.Modal.getInstance(document.getElementById('formModal'));
+      modal.hide();
+
+      document.getElementById('alert').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('alert').style.display = 'none';
+      }, 3000);
+    }
+</script>
+
+<hr class="border border-grey border-2 opacity-15">
+<section id="whyWe"></section>
+<div style="padding-top: 20px" class="container">
+    <h2 class="text-center">Почему нам доверяют?</h2>
+    <p style="padding-top: 10px" class="lead">
+        Мы не просто находим варианты или покупателей. Мы находим оптимальное решение, экономя ваше время, нервы и деньги.
+    </p>
+</div>
+<div style="padding-top: 10px" class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="hata.jpg" class="card-img-top" alt="hata">
+                <div class="card-body">
+                    <h5 class="card-title">Экспертная оценка и максимум прибыли</h5>
+                    <p class="card-text">Наши риелторы проводят глубочайший анализ рынка, чтобы продать вашу недвижимость на 15-20% дороже среднерыночной цены. Мы знаем, как подчеркнуть сильные стороны объекта.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="hata2.jpg" class="card-img-top" alt="hata2">
+                <div class="card-body">
+                    <h5 class="card-title">Скорость и надежность сделок</h5>
+                    <p class="card-text">Благодаря отлаженным процессам и широкой базе клиентов, мы продаем квартиры в среднем за 21 день. Вы получаете деньги, когда вам это удобно.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="hata3.jpg" class="card-img-top" alt="hata3">
+                <div class="card-body">
+                    <h5 class="card-title">Полная юридическая безопасность</h5>
+                    <p class="card-text">Наша служба безопасности проводит полную проверку юридической чистоты объекта, а штатный юрист сопровождает сделку. Мы гарантируем 100% чистоту и прозрачность каждой операции.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="hata4.jpg" class="card-img-top" alt="hata4">
+                <div class="card-body">
+                    <h5 class="card-title">Опыт и репутация</h5>
+                    <p class="card-text">10 лет успешной работы, более 2500 закрытых сделок и сотни благодарных отзывов — это наша лучшая рекомендация.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="border border-grey border-2 opacity-15">
+<section id="uslugi">
+</section>
+<div style="padding-top: 20px" class="container">
+    <h2 class="text-center">Комплекс услуг для вашего комфорта</h2>
+    <p style="padding-top: 10px" class="lead">
+        Мы предлагаем полный спектр услуг, чтобы вам не пришлось обращаться к кому-либо еще.
+    </p>
+</div>
+<div class="ps-3">
+
+<h5>Для клиентов</h5>
+<div>
+    <ul class="list-group list-group-flush" style="padding-right: 700px;">
+        <li class="list-group-item"><h6>Подбор квартиры мечты:</h6> Поиск по вашим критериям (район, этаж, бюджет, планировка). Покажем только проверенные и подходящие варианты.</li>
+        <li class="list-group-item"><h6>Сопровождение сделки:</h6> Организация просмотров, торг с продавцом, проверка всех документов, полное юридическое сопровождение до получения ключей.</li>
+        <li class="list-group-item"><h6>Ипотечное сопровождение:</h6> Помощь в подборе выгодной ипотечной программы и оформлении заявки в банках-партнерах.</li>
+    </ul>
+</div>
+</div>
+<div class="ps-3">
+<h5 style="padding-top: 20px">Для Продавцов</h5>
+<div>
+    <ul class="list-group list-group-flush" style="padding-right: 700px;">
+        <li class="list-group-item"><h6>Бесплатная экспресс-оценка:</h6> Точный расчет рыночной стоимости вашей недвижимости с выездом нашего специалиста.</li>
+        <li class="list-group-item"><h6>Профессиональный маркетинг:</h6> Яркая фото- и 3D-съемка, красивые объявления на 50+ площадках, реклама в соцсетях.</li>
+        <li class="list-group-item"><h6>Организация продажи «под ключ»: </h6> Мы сами проводим все показы, ведем переговоры с покупателями и организуем безопасный расчет.</li>
+    </ul>
+</div>
+</div>
+    <h2 style="padding-top: 20px" class="text-center">Дополнительные услуги</h2>
+<div class="ps-3">
+    <h5 style="padding-top: 5px">· Обмен недвижимости.</h5>
+    <h5 style="padding-top: 5px">· Консультация по инвестициям в недвижимость.</h5>
+    <h5 style="padding-top: 5px">· Юридические консультации по любым вопросам, связанным с недвижимостью.</h5>
+</div>
+<hr class="border border-grey border-2 opacity-15">
+<div style="padding-top: 20px" class="container-fluid">
+    <h2 class="text-center">Как связаться с нами?</h2>
+    <p style="padding-top: 8px" class="text-center">
+        Всегда на связи для решения вашего квартирного вопроса!
+    </p>
+</div>
+<h3 style="text-align:center;">Контакты</h3>
+<div class="container-fluid">
+<div class="nesolestag-enadenud">
+
+<div class="container-fliud">
+
+    <div class="ico-wrap"> <i class="fa fa-map-marker ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title">Юридический адрес:</h4>
+        <div class="aio-icon-description">
+            г.Санкт-Петербург, ул. набережная реки Фонтанки 66,
+            <br>этаж 3 (станция метро «Достоевская»)</div>
+    </div>
+
+    <span class="kesednsoled"></span>
+
+    <div class="ico-wrap"> <i class="fa fa-clock-o ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title">График работы складов и офисов компании:</h4>
+        <div class="aio-icon-description">
+            Пн-Пт: с 9:00 до 21:00,
+            <br>Сб-Вс: с 10:00 до 18:00</div>
+    </div>
+
+    <span class="kesednsoled"></span>
+
+    <div class="ico-wrap">
+        <i class="fa fa-envelope ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title">Электронная почта:</h4>
+        <div class="aio-icon-description">
+            info@kv-vopros.ru
+            <br></div>
+    </div>
+
+    <span class="kesednsoled"></span>
+
+    <div class="ico-wrap">
+        <i class="fa fa-phone ico-contact"></i>
+    </div>
+    <div class="meanous-andscoev">
+        <h4 class="aio-icon-title">Связь по телефону:</h4>
+        <div class="aio-icon-description">
+            +7 (495) 123-45-67
+            <br>(звонок по России бесплатный)</div>
+    </div>
+
+    <span class="kesednsoled"></span>
+
+</div>
+</div>
+</div>
+<h3 style="text-align:center;">Социальные сети</h3>
+<div class="ps-3">
+    <div>
+        <ul class="list-group list-group-flush" style="padding-right: 1300px;">
+            <li class="list-group-item"><h6><a href="https://vk.com/kv_vopros">ВКонтакте</a></h6> Здесь живут наши самые горячие предложения и отзывы.</li>
+            <li class="list-group-item"><h6><a href="https://t.me/kv_vopros">Telegram</a></h6> Канал с эксклюзивными подборками и новостями рынка.</li>
+            <li class="list-group-item"><h6><a href="https://youtube.com/c/kv_vopros">YouTube</a></h6> Видео-обзоры квартир и полезные ролики о сделках.</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
